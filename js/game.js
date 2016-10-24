@@ -13,7 +13,14 @@
         var dieNumTwo = document.querySelector('.dice aside:nth-child(2)').innerText;
         console.log(dieNumTwo);
 
+
     });
 
+    var diceInfo = {
+        start: new Date();
 
+
+    }
+
+    console.log(new Date);
 })();
