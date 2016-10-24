@@ -1,5 +1,5 @@
 (function diceGame() {
-
+  console.log('start');
     // Use document.querySelector('...') to find HTML elements
     // The argument into the function is a CSS selector!
     // Any HTML element has an `innerText` property that you can
@@ -10,17 +10,23 @@
         var dieNumOne = document.querySelector('.dice aside:first-child').innerText;
         console.log(dieNumOne);
 
-        var dieNumTwo = document.querySelector('.dice aside:nth-child(2)').innerText;
+        var dieNumTwo = document.querySelector('.dice aside:last-child').innerText;
         console.log(dieNumTwo);
 
 
     });
 
-    var diceInfo = {
-        start: new Date();
+    var dice = {
+        start: new Date(),
+        rounds: [],
+        roll: function roll() {
+            var num = 0;
+            num = Math.ceil(Math.random() * 6);
+            return num;
+        }
 
+        }
 
-    }
+    console.log(dice);
 
-    console.log(new Date);
 })();
