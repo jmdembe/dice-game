@@ -10,6 +10,9 @@
         var dieNumOne = document.querySelector('.dice aside:first-child').innerText;
         console.log(dieNumOne);
 
+        var dieNumTwo = document.querySelector('.dice aside:nth-child(2)').innerText;
+        console.log(dieNumTwo);
+
     });
 
 
