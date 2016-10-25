@@ -23,7 +23,15 @@
         console.log(dieNumOne, dieNumTwo);
         console.log(diceTotal);
 
+        if (diceTotal === 7 || diceTotal === 11) {
+            console.log('WINNER!')
+        }
+        else {
+            console.log('TRY AGAIN!');
+        }
+
     });
+
 
     var dice = {
         start: new Date(),
