@@ -19,12 +19,14 @@
         dieNumOne=parseInt(document.querySelector('.dice aside:first-child').innerText);
         dieNumTwo=parseInt(document.querySelector('.dice aside:last-child').innerText);
 
+
         var diceTotal = (dieNumOne+dieNumTwo);
         console.log(dieNumOne, dieNumTwo);
         console.log(diceTotal);
 
         if (diceTotal === 7 || diceTotal === 11) {
-            console.log('WINNER!')
+            document.querySelector('.message').innerText='Winner!';
+            console.log('I executed!')
         }
         else {
             console.log('TRY AGAIN!');
