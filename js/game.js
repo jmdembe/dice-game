@@ -13,6 +13,9 @@
 
         var dieNumTwo = document.querySelector('.dice aside:last-child').innerText;
 
+        document.querySelector('.game-start').innerText='Game Started '+ dice.start;
+        console.log(dice.start);
+
         document.querySelector('.dice aside:first-child').innerText = dice.roll();  // 5 3 1 6
         document.querySelector('.dice aside:last-child').innerText = dice.roll();
 
@@ -21,14 +24,15 @@
 
 
         var diceTotal = (dieNumOne+dieNumTwo);
-        console.log(dieNumOne, dieNumTwo);
-        console.log(diceTotal);
+
+        var diceRolls = 0;
 
         if (diceTotal === 7 || diceTotal === 11) {
-            document.querySelector('.message').innerText='Winner!';
-            console.log('I executed!')
+            diceRolls++;
+            document.querySelector('.result').innerText='Winner!';
         }
         else {
+            diceRolls++;
             console.log('TRY AGAIN!');
         }
 
@@ -37,7 +41,10 @@
 
     var dice = {
         start: new Date(),
-        rounds: [],
+        // rounds: [
+        //   {currentRound: new Date(),
+        //   rounds: 0;
+        // }],
         roll: function roll() {
             var num = 0;
             num = Math.ceil(Math.random() * 6);
