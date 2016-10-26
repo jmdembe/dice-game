@@ -6,30 +6,22 @@
 
     document.querySelector('button').addEventListener('click', function buttonClicked() {
 
-        var diceTotal = (dieNumOne+dieNumTwo);
+        var diceTotal;
         var diceRolls = 0;
-        var dieNumOne = document.querySelector('.dice aside:first-child').innerText;  // 3
-        var dieNumTwo = document.querySelector('.dice aside:last-child').innerText;
-        var gameStartTime = document.querySelector('.game-start').innerText;
+        var dieNumOne;
+        var dieNumTwo;
 
         var dice = {
             start: new Date(),
-            rounds: [{
-                currentRound: new Date(),
-            //   rounds: 0;
-            }],
+            rounds: [],
             roll: function roll() {
                 var num = 0;
                 num = Math.ceil(Math.random() * 6);
                 return num;
             }
         }
-        // var x = 13;
-        //              |--------------------------------x------------------------|
 
-
-        gameStartTime='Game Started '+ dice.start;
-        console.log(dice.start);
+        document.querySelector('.game-start').innerText;='Game Started '+ dice.start;
 
         document.querySelector('.dice aside:first-child').innerText = dice.roll();  // 5 3 1 6
         document.querySelector('.dice aside:last-child').innerText = dice.roll();
@@ -42,8 +34,7 @@
         if (diceTotal === 7 || diceTotal === 11) {
             diceRolls++;
             document.querySelector('.result').innerText='Winner!';
-        }
-        else {
+        } else {
             diceRolls++;
             console.log('TRY AGAIN!');
         }
