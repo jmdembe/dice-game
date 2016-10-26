@@ -21,7 +21,7 @@
             }
         }
 
-        document.querySelector('.game-start').innerText;='Game Started '+ dice.start;
+        document.querySelector('.game-start').innerText='Game Started '+ dice.start;
 
         document.querySelector('.dice aside:first-child').innerText = dice.roll();  // 5 3 1 6
         document.querySelector('.dice aside:last-child').innerText = dice.roll();
