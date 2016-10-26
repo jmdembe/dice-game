@@ -10,14 +10,14 @@
         var diceRolls = 0;
         var dieNumOne = document.querySelector('.dice aside:first-child').innerText;  // 3
         var dieNumTwo = document.querySelector('.dice aside:last-child').innerText;
-        var gameStartTime = document.querySelector('.game-start').innerText
+        var gameStartTime = document.querySelector('.game-start').innerText;
 
         var dice = {
             start: new Date(),
             rounds: [{
                 currentRound: new Date(),
             //   rounds: 0;
-            // }],
+            }],
             roll: function roll() {
                 var num = 0;
                 num = Math.ceil(Math.random() * 6);
@@ -39,7 +39,6 @@
 
         diceTotal = (dieNumOne+dieNumTwo)
 
-
         if (diceTotal === 7 || diceTotal === 11) {
             diceRolls++;
             document.querySelector('.result').innerText='Winner!';
@@ -50,8 +49,5 @@
         }
 
     });
-
-
-
 
 })();
