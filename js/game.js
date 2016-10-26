@@ -6,6 +6,19 @@
 
     document.querySelector('button').addEventListener('click', function buttonClicked() {
 
+        var dice = {
+            start: new Date(),
+            // rounds: [
+            //   {currentRound: new Date(),
+            //   rounds: 0;
+            // }],
+            roll: function roll() {
+                var num = 0;
+                num = Math.ceil(Math.random() * 6);
+                return num;
+            }
+
+        }
         // var x = 13;
         //              |--------------------------------x------------------------|
         var dieNumOne = document.querySelector('.dice aside:first-child').innerText;  // 3
@@ -38,20 +51,6 @@
 
     });
 
-
-    var dice = {
-        start: new Date(),
-        // rounds: [
-        //   {currentRound: new Date(),
-        //   rounds: 0;
-        // }],
-        roll: function roll() {
-            var num = 0;
-            num = Math.ceil(Math.random() * 6);
-            return num;
-        }
-
-        }
 
 
 
